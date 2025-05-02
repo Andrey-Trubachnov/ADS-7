@@ -32,7 +32,7 @@ int Train::getOpCount() {
 
 int Train::getLength() {
   countOp = 0;
-  int countCar;
+  unsigned int countCar;
   Car* tempObj;
 
   while (true) {
@@ -70,7 +70,7 @@ Train::~Train() {
   Car* tempObj = first->next;
   Car* t = tempObj;
   while (tempObj != first) {
-    t = tempObj->next;
+    t = t->next;
     delete tempObj;
     tempObj = t;
   }
