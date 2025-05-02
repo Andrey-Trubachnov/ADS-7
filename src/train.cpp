@@ -32,12 +32,11 @@ int Train::getOpCount() {
 
 int Train::getLength() {
   countOp = 0;
-  unsigned int countCar;
   Car* tempObj;
 
   while (true) {
     tempObj = first;
-    countCar = 1;
+    unsigned int countCar = 1;
 
     if (!tempObj->light) {
       tempObj->light = true;
